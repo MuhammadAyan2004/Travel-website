@@ -1,0 +1,677 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.page1 nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 40px;
+    padding-inline: 100px;
+    position: fixed;
+    background-color: transparent;
+    transition: background-color 0.7s;
+    z-index: 999;
+}
+#menu{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    display: none;
+}
+.navlist{
+    display: block;
+}
+nav .option{
+    display: flex;
+    gap: 30px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav a:hover{
+    color: rgb(190, 190, 190);
+}
+nav div img{
+    width: 150px;
+    cursor: pointer;
+}
+nav.sticky{
+    width: 100%;
+    background-color: rgb(14, 11, 32);
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-inline: 80px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+}
+.home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(img/bg1.png);
+    background-size: cover;
+    background-position: center;
+    animation: slide 25s infinite;
+}
+@keyframes slide{
+    0%{
+        background: url(img/bg2.png);
+    }
+    25%{
+        background: url(img/bg3.png);
+    }
+    50%{
+        background: url(img/bg4.png);
+    }
+    50%{
+        background: url(img/bg1.png);
+    }
+    75%{
+        background: url(img/bg1.png);
+    }
+    100%{
+        background: url(img/bg5.png);
+    }
+}
+.intro{
+    color: white;
+    width: 100%;
+    padding-top: 120px;
+    padding-inline: 100px;
+}
+.intro h4{
+    font-family: cursive;
+    font-size: large;
+    line-height: 50px;
+}
+.intro h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+}
+.intro p{
+    color: grey;
+}
+.btn-1{
+    padding-top: 30px;
+    word-spacing: 10px;
+}
+.btn-1 button{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 1px solid orangered;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+.btn-1 button:nth-child(1){
+    background-color: orangered;
+}
+.btn-1 button:nth-child(2){
+    background:transparent;
+}
+.btn-1 button:nth-child(2):hover{
+    background-color: orangered;
+    transition: 0.7s ease;
+}
+.places{
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.place1{
+    width: 120px;
+    text-align: center;
+}
+.place2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.place2 img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+.place2 img:hover{
+    transform: scale(1.2);
+}
+.place1 p{
+    color: white;
+}
+.page2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.destination{
+    padding-top: 90px;
+    width: 90%;
+}
+.destin{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.destin p{
+    color: red;
+    font-size: 20px;
+    font-family: serif;
+    font-style: italic;
+    font-variant: small-caps;
+}
+.destin h1{
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.destin .icon{
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid red;
+    outline: red;
+    padding: 10px;
+    cursor: pointer;
+}
+.icon i{
+    font-size: 28px;
+}
+.icon:hover{
+    color: white;
+    background-color: orangered;
+    transition: 0.5s ease-in-out;
+}
+.route{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: 20px;
+}
+.route div img{
+    width: 100%;
+    border-radius:20px;
+    cursor: pointer;
+}
+.route div img:hover{
+    transform: scale(1.1);
+}
+.route .pic1,.pic2,.pic3,.pic4{
+    width: 200px;
+    position: relative;
+}
+.pic1 span,.pic2 span,.pic3 span,.pic4 span{
+    position: absolute;
+    width: 55px;
+    height: 25px;
+    padding: 0px 6px;
+    background-color: white;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    z-index: 99;
+}
+.pic1 span i b,.pic2 span i b,.pic3 span i b,.pic4 span i b{
+    color: grey;
+    font-size:14px;
+}
+.pic1 span i,.pic2 span i,.pic3 span i,.pic4 span i{
+    color: orange;
+    font-size: 20px;
+}
+.page3{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 100px;
+    flex-wrap: wrap;
+    padding-top: 90px;
+}
+.text,.picture,.description{
+    min-width: 10px;
+    height: 450px;
+    color: black;
+}
+.desc1 {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+}
+.desc1 .gola{
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(100,100,100,0.7);
+}
+.gola img{
+    width: 100%;
+}
+.text-gap h2{
+    color: black;
+    font-size: 22px;
+    line-height: 2px;
+    padding-top: 20px;
+}
+.text-gap p{
+    color: grey;
+    font-size: 14px;
+}
+.picture img{
+    width: 90%;
+    object-fit: cover;
+}
+.text{
+    padding-block:20px;
+}
+.text h5{
+    font-size: 18px;
+    font-weight: 100;
+    font-style: italic;
+    color: red;
+}
+.text h1{
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1;
+}
+.text p{
+    color: grey;
+}
+.btn-2{
+    padding-top: 30px;
+    word-spacing: 10px;
+}
+.btn-2 button{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 1px solid orangered;
+    background-color: orangered;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+.middle-text{
+    width: 100%;
+    text-align: center;
+}
+.middle-text p{
+    color: red;
+    font-size: 18px;
+}
+.middle-text h1{
+    font-size: 36px;
+}
+.page4{
+    width: 100%;
+    min-height: 100vh;
+}
+.page4 .uppar{
+    display: flex;justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 90%;
+    min-height: 50vh;
+    margin: 0 auto;
+}
+.uppar1{
+    width: 280px;
+    min-height: 50vh;
+    background-color: aliceblue;
+    margin-top: 30px;
+    border-radius:10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 5px 15px 1px rgba(100,100,100,0.7);
+}
+.uppar1 img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.uppar1 img:hover{
+    transform: scale(1.1);
+}
+.uppar1 p {
+    color: red;
+    font-weight: 600;
+    padding-inline: 20px;
+    padding-top: 20px;
+}
+.uppar1 h1{
+    font-size: 20px;
+    font-weight: 100;
+    padding-inline: 20px;
+    padding-top: 5px;
+}
+.loc{
+    padding-inline: 20px;
+    padding-top: 15px;
+    display: flex;
+    gap: 60px;
+}
+.loc i {
+    color: red;
+}
+.loc i span{
+    color:black;
+}
+.rating{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    min-width: 20px;
+    background-color: antiquewhite;
+    padding-block: 4px;
+    padding-inline: 8px;
+    z-index: 99;
+}
+.rating i{
+    color: orange;
+    font-size: 20px;
+}
+.rating i span{
+    color:black;
+    font-size: 14px;
+    padding-block: 4px;
+}
+.like{
+    position: absolute;
+    width: 40px ;
+    height: 40px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    padding: 10px;
+    top: 53%;
+    right: 20%;
+    color: orangered;
+    font-size: 18px;
+    z-index:99;
+    cursor: pointer;
+    transition: backgroun-color 0.3s,color 0.3s;
+}
+.uppar1:hover .like {
+    background-color: orangered;
+    color: white;
+}
+.test{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 70px;
+}
+.left,.right{
+    width: 100vh;
+    padding-block: 40px;
+    padding-inline: 50px;
+    margin-left: 20px;
+}
+.left h5{
+    color: orangered;
+    font-family: serif;
+    font-style: italic;
+    font-size: 18px;
+}
+.left h1{
+    font-size: 50px;
+    color:rgb(14, 11, 32);
+}
+.left p{
+    color: grey;
+}
+.right .box{
+    background-color: rgb(252, 0, 34);
+    width: 100%;
+    padding: 30px 30px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.box p{
+    line-height: 1.5;
+}
+.right .p1{
+    margin-top: 25px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom-left-radius:0px ;
+}
+.right .p2{
+    margin-top: 2px;
+    width: 160px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.star{
+    color: orange;
+    font-size: 24px;
+    cursor: pointer;
+}
+.profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: -50px;
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+}
+.contact{
+    width: 100%;
+    min-height: 60vh;
+    background-color: rgb(14, 11, 32);
+}
+.border{
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+.border h2{
+    color: white;
+}
+.border p{
+    color: white;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lists{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 20px;
+    color: grey;
+}
+.lists ul li{
+    cursor: pointer;
+    padding-top: 20px;
+}
+.lists ul li:hover{
+    color: white;
+    transform: scale(1.1);
+}
+.spots{
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.spots div{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.spots div img{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.spots div img:hover{
+    transform: scale(1.3);
+}
+
+@media(max-width:980px){
+    #menu{
+        display: block;
+        cursor: pointer;
+    }
+    .navlist{
+        width: 50vh;
+        height: 100vh;
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        right: -100% ;
+        transition: all 0.7s ease-in-out;
+    }
+    .option{
+        flex-direction: column;
+        padding-inline: 20px;
+        padding-block: 40px;
+    }
+}
+@media(max-width:400px){
+    .page3{
+        padding-inline: 30px;
+        flex-direction: column;
+    }
+    .text,.description{
+        margin-left: -3%;
+    }
+    .picture{
+        margin-left: -19px;
+        width: 300px;
+    }
+    .text h1{
+        font-size: 30px;
+    }
+    .text h5{
+        font-size: 12px;
+    }
+    .text p{
+        font-size: 12px;
+    }
+    .description p{
+        font-size: 10px;
+    }
+    .trex{
+        padding-inline: 0px;
+    }
+}
+@media(max-width:600px){
+    .btn-1 button{
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .profile {
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+        left: 30%;
+    }
+    .right .p1{
+        margin-top: 25px;
+        width: 130px;
+        font-size: 16px;
+    }
+    .right .p2{
+        margin-top: 2px;
+        margin-bottom: 10px;
+        width: 120px;
+        padding: 10px;
+    }
+    .left,.right{
+        margin: 0;
+        margin-left: -32px;
+    }
+    nav div img{
+        margin-left: -70px;
+    }
+    .intro #t1{
+        font-weight: 100;
+        font-size: small;
+    }
+    .intro #t2{
+        font-size: 38px;
+    }
+    .intro p{
+        font-size: 14px;
+    }
+    .intro{
+        padding-inline: 10px;
+    }
+    .places{
+        gap: 15px;
+    }
+    .place1{
+        width: 80px;
+    }
+    .place2{
+        width: 60px;
+        height: 60px;
+    }
+    .place2 img{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media(max-width:680px){
+    nav div img{
+        margin-left: -70px;
+    }
+    .intro{
+        padding-inline: 30px;
+    }
+    .intro #t2{
+        font-size: 48px;
+    }
+}
+@media(max-width:455px){
+}
